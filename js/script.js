@@ -168,13 +168,13 @@ document.querySelectorAll(".catalog__contain__accordion__list__item__list__item_
     item.addEventListener("click", function (i){
         const path = i.currentTarget.dataset.path;
         document.querySelectorAll('.catalog__contain__painter').forEach(function (k){
-            k.classList.remove('catalog__contain__painter_active');
+            k.classList.remove('catalog__contain__painter-active');
         })
         const target = document.querySelector(`[data-target="${path}"]`)
         if (target){
-            target.classList.add("catalog__contain__painter_active");
+            target.classList.add("catalog__contain__painter-active");
         }else{
-            document.querySelector(".catalog__contain__painter-empty").classList.add("catalog__contain__painter_active");
+            document.querySelector(".catalog__contain__painter-empty").classList.add("catalog__contain__painter-active");
         }
         document.querySelectorAll(".catalog__contain__accordion__list__item__list__item__btn").forEach(function (p){
             p.classList.remove("catalog__contain__accordion__list__item__list__item__btn_active");
